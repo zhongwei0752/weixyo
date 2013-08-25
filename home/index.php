@@ -64,9 +64,9 @@ if(empty($_SCONFIG['networkpublic'])) {
 	realname_get();
 	
 	$_TPL['css'] = 'network';
-	include_once template("index");
+	include_once(S_ROOT.'./source/do_login.php');
 } else {
-	include_once(S_ROOT.'./source/network.php');
+	include_once(S_ROOT.'./source/do_login.php');
 }
 
 ?>
