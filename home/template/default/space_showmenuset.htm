@@ -1,0 +1,29 @@
+<!--{eval $_TPL['titles'] = array('应用');}-->
+<!--{eval $friendsname = array(1 => '仅好友可见',2 => '指定好友可见',3 => '仅自己可见',4 => '凭密码可见');}-->
+
+<!--{template header}-->
+<!--{if $list}-->
+需要购买的应用:<br/>
+<!--{loop $list $value}-->
+应用名称:$value[subject]/购买月份:<!--{if $value[appstatus]}-->$value['addmonth']<!--{else}-->$value['month']<!--{/if}-->/金额:<!--{eval $cost=$value['cost'];}-->$cost<br/>
+
+<!--{/loop}-->
+总额:<!--{eval $allcost=array_sum($allcost1);}-->$allcost
+<form name=alipayment action=./payphp/alipayapi.php method=post target="_blank">
+
+<input type="hidden" name="WIDseller_email" value="1907983236@qq.com" />
+<input type="hidden" name="WIDout_trade_no" value="$number.$zfbuid" />
+<input type="hidden" name="WIDsubject" value="微伍应用" />
+<input type="hidden" name="WIDtotal_fee" value="$allcost" />
+<input type="hidden" name="WIDbody" value="欢迎选购微伍应用" />
+<input type="hidden" name="WIDshow_url" value="欢迎选购微伍应用" />
+<input type="submit" value="购买"  name="buy">
+
+</form>
+<form action = "space.php?do=showmenuset" method = "post">
+<input type="submit" value="暂不购买"  name="cancel">
+</form>
+<!--{else}-->
+没有需要购买的应用
+<!--{/if}-->
+<!--{template footer}-->

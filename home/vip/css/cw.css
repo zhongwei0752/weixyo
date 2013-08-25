@@ -1,0 +1,196 @@
+div.clear {clear: both;}
+hr {border:none 0;border-top:1px dotted #caced0;width:100%;height:1px;margin:0;display:block;}
+div.hr {border:none 0;width:185px;height:1px;margin:15px 0 0;display:block;clear:both;background:url(../img/hr.png) no-repeat;}
+img {border:0;}
+
+@font-face {
+	font-family: 'DINWebMedium';
+	src: url('../fonts/DINWeb-Medium.eot');
+	src: local('鈽�'), url('../fonts/DINWeb-Medium.woff') format('woff'), url('../fonts/DINWeb-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'DINWebRegular';
+	src: url('../fonts/DINWeb.eot');
+	src: local('鈽�'), url('../fonts/DINWeb.woff') format('woff'), url('../fonts/DINWeb.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	overflow:hidden; 		/* needed to eliminate scrollbars caused by the background image */
+	padding:0;margin:0;		/* necessary for the raster to fill the screen */
+	height:100%;width:100%;
+	font: 400 12px/140% 'DINWebRegular',"ff-din-web-1","ff-din-web-2", Arial, sans-serif;
+	background-color:#00baf2;
+	-webkit-text-size-adjust: none;
+}
+
+body.bgwhite {
+	background-color:#fff;
+}
+
+.backdrop img {-ms-interpolation-mode:bicubic;}
+
+.bgimg {position:absolute;z-index: -1;}
+
+#realBody{
+	position:absolute;
+	z-index: 5;				/* Place the new body above the background image */
+	overflow:auto; 			/* restore scrollbars for the content */
+	height:100%;width:100%;	/* Make the new body fill the screen */
+}
+
+/* wrapper styles */
+/*#wrapper{width:1060px;height:630px;position:absolute;bottom:53px;left:17px;overflow:hidden;}*/
+#wrapper{width:485px;height:100%;margin:0 auto; position:relative;left:17px;}
+#wrapper.home{width:763px;}
+
+/* main nav/logo box styles */
+#navMain{width:485px;height:56px;position:absolute;top:30px;left:2px;background-color:#fff;z-index:5;}
+#navMain.alt{border:1px solid #e8e8e8;top:482px;left:1px;}
+
+/* main logo styles */
+#logo{width:485px;height:27px;position:absolute;left:10px;bottom:15px;}
+#logo a{display:block;width:209px;height:27px;background:url(http://www.christianwoo.com/../images/buttons/christian-woo-logo.png) no-repeat;text-indent:-9999px;}
+
+/* main nav styles */
+#nav{width:90px;float:right;margin:34px 16px 0 0;}
+#nav ul{margin:0;font-size:14px;line-height:16px;text-transform:uppercase;}
+#nav ul li{margin:0;}
+#nav a{color:#a6aeb0;text-decoration:none;}
+#nav a:hover,#nav a:active,#nav li.current a, .subnavProfile li.current a{color:#00baf2;}
+
+/* spotlight styles */
+#spotlight{width:284px;height:146px;position:absolute;top:483px;left:479px;background:url(http://www.christianwoo.com/../images/backgrounds/bg-spotlight.png) repeat;}
+#spotlightPhoto{width:150px;height:146px;float:left;}
+#spotlightInfo{width:114px;height:146px;padding:0 10px;float:right;}
+#spotlightInfo div.copy{height:70px;margin:60px 0 0;overflow:hidden;}
+#spotlightInfo p{font-size:11px;line-height:13px;color:#a6aeb0;}
+#spotlightInfo p.title{color:#455560;text-transform:uppercase;margin-bottom:5px;font-size:10px;}
+#spotlightInfo a{color:#00baf2;text-decoration:none;}
+
+/* main panel styles */
+#panel{width:479px;position:absolute;top:96px;left:2px;background: url(http://www.christianwoo.com/../images/backgrounds/bg-panel.png) top repeat;z-index:5;}
+
+
+div.panelControls{width:479px;height:24px;margin-bottom:50px;outline:none;}
+div.panelControls a{display:block;width:56px;height:24px;text-indent:-9999px;float:right;outline:none;}
+div.panelControls a.open{background: url(http://www.christianwoo.com/../images/buttons/btn-panel.png) 0 0 no-repeat;text-indent:-9999px;outline:none;}
+div.panelControls a.closed{background: url(http://www.christianwoo.com/../images/buttons/btn-panel.png) 0 -24px no-repeat;text-indent:-9999px;outline:none;}
+
+
+
+div.panelContent{clear:both;width:447px;margin:0 16px 30px;color:#a6aeb0;}
+div.panelContent div.copy{width:345px;float:left;font-size:15px;}
+div.panelContent div.nosubnav{width:447px;}
+div.panelContent h1{font:400 33px/36px "ff-din-web-1","ff-din-web-2", Arial, sans-serif;margin:0 0 20px;}
+div.panelContent h3{font-family:"ff-din-web-1","ff-din-web-2",Arial, sans-serif; font-size:15px; color:#01BAF2; /*Baby Blue*/ margin:0 0 5px; text-transform:uppercase;font-weight:100;}
+div.panelContent p{line-height:15px;margin:0;padding-right:22px;}
+div.panelContent a{color:#a6aeb0;font-weight:bold;text-decoration:none;}
+div.panelContent a:hover{color:#00baf2;}
+div.panelContent div.thumbs{margin:20px 0 0;border:1px solid transparent;}
+div.panelContent div.thumbs a{position:relative;display:block;float:left;width:77px;height:55px;margin:0 5px 0 0;}
+div.panelContent div.thumbs a.last{margin:0;}
+div.panelContent div.thumbs a.selected span{display:block;width:77px;height:55px;position: absolute;top:0;left:0;background: url(../images/backgrounds/bg-thumbs-overlay.png) no-repeat;}
+
+div.panelContent div.subnav{width:90px;float:right;margin:0;color:#a6aeb0;font-size:14px;line-height:16px;}
+div.panelContent div.subnav ul{margin:0;text-transform:uppercase;}
+div.panelContent div.subnav ul li{margin:0;}
+div.panelContent div.subnav a{color:#a6aeb0;text-decoration:none;font-weight:normal;}
+div.panelContent div.subnav a:hover,div.panelContent div.subnav a:active,div.panelContent div.subnav a.selected{color:#00baf2;}
+
+div.subnavProfile{width:90px;float:right;margin:0;color:#a6aeb0;font-size:14px;line-height:16px;margin-bottom:30px;}
+div.subnavProfile ul{margin:0;text-transform:uppercase;}
+div.subnavProfile ul li{margin:0;}
+div.subnavProfile a{color:#a6aeb0;text-decoration:none;font-weight:normal;}
+div.subnavProfile a:hover,div.subnavProfile a:active,div.subnavProfile a.selected{color:#00baf2;}
+
+div.panelContent div.address{float:left;width:135px;}
+div.panelContent div.address p{margin:0 0 15px;padding-right:0px;}
+div.panelContent div.map{float:right;width:276px;}
+
+#pressTable{border-collapse:collapse;text-transform:uppercase;font-size:14px;}
+#pressTable tr.altrow{background-color:#edefef;}
+#pressTable td{padding: 6px 15px;}
+#pressTable td a{color:#00baf2;}
+#pressTable td.date{background:transparent url(http://www.christianwoo.com/../images/backgrounds/bg-press-table.png) left repeat-y;}
+#pressTable td.link{background:transparent url(http://www.christianwoo.com/../images/backgrounds/bg-press-table.png) left repeat-y;}
+
+/* collections styles */
+#collections{width:880px;margin:0 auto;}
+/* #collections{width:910px;height:430px;margin:0 auto;} */
+
+#subnav{width:90px;float:left;color:#a6aeb0;font-size:14px;line-height:16px;}
+#subnav ul{margin:20px 0 0;text-transform:uppercase;}
+#subnav.intro ul{margin:0;text-transform:uppercase;}
+#subnav ul li{margin:0;}
+#subnav a{color:#a6aeb0;text-decoration:none;}
+#subnav a:hover,#subnav a:active,#subnav a.selected{color:#00baf2;}
+
+#collectionsContent{width:760px;float:right;}
+#collectionsContent.intro{width:725px;float:left;margin:0 0 0 18px;}
+
+#collectionsContent p.headline{font:35px/42px "ff-din-web-1","ff-din-web-2", Arial, sans-serif;color:#00baf2;margin:-5px 0 15px;}
+/* #collectionsContent p.headline{font:600 30px/34px 'DINWebMedium',"ff-din-web-1","ff-din-web-2", Arial, sans-serif;color:#00baf2;margin:0 0 15px;} */
+#collectionsContent p.blue{color:#00baf2;}
+#collectionsContent p.white{color:#fff;}
+#collectionsContent p a{color:#a6aeb0;font-size:10px;line-height:16px;text-decoration:none;text-transform:uppercase;}
+#collectionsContent p a:hover{color:#00baf2;}
+
+#collectionsGallery{width:553px;float:left;overflow: hidden;}
+#collectionsGallery div.carousel{width:533px;height:250px;float:left;margin:0 auto;}
+#collectionsGallery div.thumbs{width:533px;margin:20px auto 0;}
+#collectionsGallery div.thumbs div{margin:0 auto;}
+#collectionsGallery div.thumbs img{display:block;float:left;margin:7px 3px 7px 4px;}
+#collectionsGallery div.thumbs a:hover img,#collectionsGallery div.thumbs a.selected img{background: url(../images/backgrounds/bg-thumbs-products.png) repeat;}
+
+#collectionsDetails{width:185px;float:right;margin:20px 0 0;}
+#collectionsDetails div.copy{font-size:11px;line-height:16px;color:#a6aeb0;}
+#collectionsDetails div.copy h3{color:#01BAF2; /*baby blue*/}
+#collectionsDetails h1{font-weight:normal;font-size:10px;line-height:16px;margin:0 0 6px;text-transform:uppercase;}
+#collectionsDetails h2{font-weight:normal;font-size:10px;line-height:16px;margin:12px 0 6px;text-transform:uppercase;}
+#collectionsDetails h1 span,#collectionsDetails h2 span{color:#00baf2;}
+#collectionsDetails p{margin:0 0 10px;}
+#collectionsDetails ul{margin:0 0 10px;}
+#collectionsDetails div.bands{margin:0 0 15px;}
+#collectionsDetails div.bands img{display:block;width:20px;height:20px;float:left;margin:0 3px 0 0;}
+#collectionsDetails div.thumbs{margin:25px 0;}
+#collectionsDetails div.share{text-transform:uppercase;margin:10px 0 0;font-size:10px;line-height:16px;color:#a6aeb0;}
+#collectionsDetails div.share a{display:block;float:left;text-transform:uppercase;color:#a6aeb0;text-decoration:none;}
+#collectionsDetails div.share a:hover{color:#00baf2;}
+#collectionsDetails div.share ul{display:block;float:left;margin:0 0 0 10px;width:100px;}
+
+#carousel-left{float:left;width:10px;height:23px;margin:90px 0 0;}
+#carousel-right{float:left;width:10px;height:23px;margin:90px 0 0;}
+/* SH's additions */
+
+/* Main page */
+.backdrop{position:absolute}
+.backdrop img.#bgimg2{display:none}
+#fs-left{display:none;position:absolute;left:0px;top:48%;background-image: url(../images/buttons/arrows-fs-left.png);width:22px;height:37px;z-index:5;cursor:pointer;}
+#fs-right{display:none;position:absolute;right:0px;top:48%;background-image: url(../images/buttons/arrows-fs-right.png);width:22px;height:37px;z-index:5;cursor:pointer;}
+
+#fs-hover-left{position:absolute;left:0px;top:0%;height:100%;width:17px;z-index:6;}
+#fs-hover-right{position:absolute;right:0px;top:0%;height:100%;width:17px;z-index:6;}
+
+/* Collections */
+#collectionsDetails div.copy{display:none}
+#collectionsDetails div.copy div.thumbs a,#panel div.panelContent div.copy div.thumbs a {text-decoration:none} /* webkit fix */
+
+div.overlay{display:none;position: absolute;z-index:51;cursor: pointer;}
+img#shotimg{cursor: pointer;}
+
+#collectionsDetails div.share ul{display:none;}
+
+.nobackground{background:white  !important}
+.nomarginbottom{margin-bottom:0px !important}
+
+div.scrollbarpaper-container{background-color:#FFFFFF;position:absolute;z-index:10;}
+
+div.scrollbarpaper-track{background: url(../images/buttons/track.png) repeat-y scroll 0 0 #FFFFFF;cursor:pointer;height:100%;position:absolute;right:0;top:0;width:10px;}
+div.scrollbarpaper-drag{background:none repeat scroll 0 0 #C4C2C2;height:100px;position:absolute;width:100%;}
+div.scrollbarpaper-drag-top{position:absolute;top:0;width:100%;}
+div.scrollbarpaper-drag-bottom{bottom:0;position:absolute;width:100%;}
+

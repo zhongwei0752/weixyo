@@ -1,0 +1,36 @@
+<!--{if empty($_TPL['getmore'])}--> 
+<!--{eval $_TPL['titles'] = array('首页');}-->
+    <link rel="stylesheet" type="text/css" href="./template/default/jquery-mobile-fluid960.min.css">
+    <link rel="stylesheet" type="text/css" href="./template/default/style1.css">
+    <link rel="stylesheet" type="text/css" href="./template/default/file_beauty.css">
+    <link type='text/css' href='./template/default/basic_chosen.css' rel='stylesheet' media='screen' />
+<!--{template header}-->
+
+
+<form action="space.php?do=cheak" method="post">
+ <div id="weixin">
+                       <h3 style="font-size:20px;color:#44B1BA;background:#ECEFF1;margin:0;line-height:40px;text-align:left;padding-left:10px;">预约预定</h3>  
+                        <div style="background:#fff;font-size:15px;text-align:center;color: #6D6D6D;">请填写你的电话号码和所在位置，我们会有专人为你完成订购。<br/><br/>电话号码:<input type="text" name="phone"><br/><br/>详细地址:<input type="text" name="place"><br/><br/>
+                        <input type="submit" style="width:60px;" value="提交">
+                        <input type="hidden" name="cheak" value="1">
+                        </div>
+
+                        </div>
+                      </form>
+
+  <!--{if {$_SN[$_SGLOBAL[supe_uid]]}=="admin"}-->
+    <form action="space.php?do=cheak" method="post">
+ <div id="weixin">
+                       <h3 style="font-size:20px;color:#44B1BA;background:#ECEFF1;margin:0;line-height:40px;text-align:left;padding-left:10px;">会员卡确认</h3>  
+                        <div style="background:#fff;font-size:15px;text-align:center;color: #6D6D6D;"><br/><br/>网站用户名:<input type="text" name="username"><br/><br/>网站密码:<input type="text" name="password"><br/><br/>
+                        <input type="submit" style="width:60px;" value="提交">
+                         <input type="hidden" name="cheakcard" value="1">
+                        </div>
+
+                        </div>
+                      </form>
+    <!--{/if}-->
+
+
+<!--{template footer}-->
+<!--{/if}-->

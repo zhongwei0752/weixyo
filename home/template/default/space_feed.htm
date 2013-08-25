@@ -1,0 +1,424 @@
+<!--{if empty($_TPL['getmore'])}-->	
+<!--{eval $_TPL['titles'] = array('首页');}-->
+
+
+<!--{template header}-->
+
+<head>
+<link href="./timer/css/history.css" rel="stylesheet" />
+</head>
+<body>
+<!-- 代码 开始 -->
+<div class="head-warp">
+  <div class="head">
+        <div class="nav-box">
+          <ul>
+              <li class="cur" style="text-align:center; font-size:42px; font-family:'微软雅黑', '宋体';"></li>
+          </ul>
+        </div>
+  </div>
+</div>
+<div class="main">
+  <div class="history">
+    <div class="history-date">
+      <ul>
+
+      	<h2 class="first"><a href="#nogo">全站动态</a></h2>
+
+       	<!--{if $list}-->
+	<!--{loop $list $day $values}-->
+		<!--{loop $values $value}-->
+		<ul>
+		
+			 <li class="green">
+          <h3><!--{date('m/d H:i',$value[dateline],1)}--><span><!--{date('Y',$value[dateline],1)}--></span></h3>
+          <dl>
+            <dt style="font-size:10px;">$value[title_template] 
+	<span>$value[body_template]</span>
+	</dt>
+          </dl>
+        </li>
+
+       
+		
+		</ul>
+		<!--{/loop}-->
+	<!--{/loop}-->
+	<!--{else}-->
+		<ul>
+			<li>没有相关动态</li>
+		</ul>
+	<!--{/if}-->
+        
+
+        
+
+    
+         <!-- <li>
+          <h3>06.15<span>2012</span></h3>
+          <dl>
+            <dt>ÐÂÔöÁËÏÂÔØÎÄ¼þÇ°É¨ÃèÏÂÔØÁ´½Ó°²È«ÐÔµÄ¹¦ÄÜ</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>06.05<span>2012</span></h3>
+          <dl>
+            <dt>W3CÁªÃËÊ×Ï¯Ö´ÐÐ¹Ù·Ã»ª£¬Ê×Õ¾·ÃÎÊ360¹«Ë¾
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>05.12<span>2012</span></h3>
+          <dl>
+            <dt>360ÊÜÑû³öÏ¯W3CÁªÃË³ÉÔ±¼ûÃæ»áÒé</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>05.11<span>2012</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½18.0
+	<span>ÐÂÔö¶àÓÃ»§Ê¹ÓÃä¯ÀÀÆ÷µÄ¹¦ÄÜ</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>05.03<span>2012</span></h3>
+          <dl>
+            <dt>360¼«ËÙä¯ÀÀÆ÷ÓÃ»§ÊýÍ»ÆÆ5000Íò£¬»îÔ¾ÓÃ»§³¬2000Íò
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>03.08<span>2012</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½17.0£¬ÌáÉýä¯ÀÀÆ÷ËÙ¶È¡¢ÔöÇ¿°²È«ÐÔ
+	<span>ÐÂÔöHTTP¹ÜÏß»¯¼¼Êõ£¬´ó·ùÌáÉýÍøÒ³¼ÓÔØËÙ¶È</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>01.29<span>2012</span></h3>
+          <dl>
+            <dt>¹úÄÚÂÊÏÈ¼ÓÈëW3CÁªÃËHTML¹¤×÷×é£¬²ÎÓëHTML5±ê×¼ÖÆ¶¨</span>
+	</dt>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <div class="history-date">
+      <ul>
+      	<h2 class="date02"><a href="#nogo">2011Äê</a></h2>
+        <li>
+          <h3>12.12<span>2011</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½16.0£¬ÌáÉýä¯ÀÀÆ÷ËÙ¶È¡¢ÔöÇ¿°²È«ÐÔ
+	<span>ÐÂÔö¶Ô360Íø¹º±£ïÚÖ§³Ö£¬±£»¤ÍøÉÏ½»Ò×°²È«</span>
+	</dt>
+          </dl>
+        </li>
+        <li class="green">
+          <h3>11.24<span>2011</span></h3>
+          <dl>
+            <dt>·¢²¼¹úÄÚÊ×¸öË«ºËä¯ÀÀÆ÷ÊµÑéÊÒ
+	<span>ÇáËÉ²âÊÔä¯ÀÀÆ÷ÐÔÄÜ</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>11.01<span>2011</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½15.0
+	<span>ÌáÉýä¯ÀÀÆ÷ËÙ¶È¡¢ÔöÇ¿°²È«ÐÔ</span>
+	</dt>
+          </dl>
+        </li>
+         <li>
+          <h3>10.27<span>2011</span></h3>
+          <dl>
+            <dt>×÷Îª¹úÄÚÎ¨Ò»ÊÜÑû²ÎÕ¹µÄä¯ÀÀÆ÷³§ÉÌ£¬²ÎÕ¹2011¹È¸è¿ª·¢ÕßÈÕ´ó»á
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>09.22<span>2011</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½14.0
+	<span>¼ÓÈëCanvas 2DµÄGPU¼ÓËÙµÈÌØÐÔ</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>09.21<span>2011</span></h3>
+          <dl>
+            <dt>360¼«ËÙä¯ÀÀÆ÷ÓÃ»§Á¿³¬Ç§Íò£¬Ðû²¼ÓëChromiumÉçÇø°æ±¾Í¬²½
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>08.30<span>2011</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½13.0
+	<span>ÐÂÔö¸ü·á¸»µÄÆ¤·ô×Ô¶¨ÒåÖ§³Ö</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>06.22<span>2011</span></h3>
+          <dl>
+            <dt>ÐÂÔö¶Ôcrx¸ñÊ½µÄ¹ØÁª
+	<span>Ë«»÷crxÎÄ¼þ¼´¿É°²×°À©Õ¹¡¢Æ¤·ô</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>05.19<span>2011</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½10.0
+	<span>¼«ËÙä¯ÀÀÆ÷Óë°²È«ä¯ÀÀÆ÷ÍøÂçÊÕ²Ø¼Ð»¥Í¨</span>
+	</dt>
+          </dl>
+        </li>
+        <li>
+          <h3>04.07<span>2011</span></h3>
+          <dl>
+            <dt>ÍÆ³öÓ¦ÓÃ¿ª·ÅÆ½Ì¨£¬Óë¿ª·¢Õß¹²ÏíÓÃ»§×ÊÔ´
+	</dt>
+          </dl>
+        </li>
+       <li>
+          <h3>03.27<span>2011</span></h3>
+          <dl>
+            <dt>ÐÂÔö360ÔÆ°²È«ÍøÖ·À¹½Ø
+	<span>ÐÂÔöIE9¸ßËÙÄ£Ê½£¬Ö§³ÖGPUÓ²¼þ¼ÓËÙ</span>
+	</dt>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <div class="history-date">
+      <ul>
+      	<h2 class="date02"><a href="#nogo">2010Äê</a></h2>
+        <li>
+          <h3>12.13<span>2010</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½7.0<span>ÌáÉýä¯ÀÀÆ÷ËÙ¶È¡¢ÔöÇ¿°²È«ÐÔ</span></dt>
+          </dl>
+        </li>
+        <li>
+          <h3>10.20<span>2010</span></h3>
+          <dl>
+            <dt>Éý¼¶¼«ËÙÄÚºËµ½6.0<span>ÐÂÔö360ÕÊ»§£¬Í¬²½ÍøÂçÊÕ²Ø¼Ð</span></dt>
+          </dl>
+        </li>
+        <li>
+          <h3>09.15<span>2010</span></h3>
+          <dl>
+            <dt>Ê×¿îË«ºË°²È«ä¯ÀÀÆ÷ - 360¼«ËÙä¯ÀÀÆ÷·¢²¼
+	<span>Ê×¸ö°üº¬É³Ïä¡¢ÏµÍ³¼¶·À×¢Èë¡¢ÍêÕû¶à½ø³Ì¸ôÀë¼Ü¹¹µÈ°²È«»úÖÆµÄË«ºËä¯ÀÀÆ÷<br><br></span>
+	</dt>
+	<br><br><br><br>
+          </dl>
+        </li>-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script src="./timer/js/jquery.js"></script> 
+<script src="./timer/js/main.js"></script>
+<!-- ´úÂë ½áÊø -->
+
+
+</div>
+
+<div id="sidebar">
+	<!--{if !$isnewer && $task}-->
+	<div class="ye_r_t"><div class="ye_l_t"><div class="ye_r_b"><div class="ye_l_b">
+		<div class="task_notice" style="width:230px;">
+			<a title="忽略" class="float_cancel" href="cp.php?ac=task&taskid=$task[taskid]&op=ignore">忽略</a>
+			<div class="task_notice_body">
+				<img src="$task[image]" alt="" class="icon" />
+				<h3><a href="cp.php?ac=task&op=do&taskid=$task[taskid]">$task[name]</a></h3>
+				<p>可获得 <span class="num">$task[credit]</span> 积分</p>
+			</div>
+		</div>
+	</div></div></div></div>
+	<!--{/if}-->
+	
+	<!--{if $topiclist}-->
+	<div class="ye_r_t"><div class="ye_l_t"><div class="ye_r_b"><div class="ye_l_b">
+		<div class="task_notice" style="width:230px;">
+			<!--{loop $topiclist $key $value}-->
+			<div class="task_notice_body">
+				<!--{if $value[pic]}-->
+				<a href="space.php?do=topic&topicid=$value[topicid]"><img src="$value[pic]" alt="" class="icon" /></a>
+				<!--{/if}-->
+				<h3>
+					<img src="image/app/topic.gif" align="absmiddle">
+					<a href="space.php?do=topic&topicid=$value[topicid]">$value[subject]</a>
+				</h3>
+				<div class="gray">已有 <span class="num">$value[joinnum]</span> 人参与</div>
+			</div>
+			<!--{/loop}-->
+		</div>
+	</div></div></div></div>
+	<!--{/if}-->
+
+	<!--{if $newspacelist}-->
+	<div class="sidebox">
+		<h2 class="title">
+			<p class="r_option">
+				<a href="space.php?do=top">排行</a>
+			</p>
+			热烈欢迎新成员
+		</h2>
+		<ul class="avatar_list">
+			<!--{loop $newspacelist $key $value}-->
+			<li>
+				<div class="avatar48"><a href="space.php?uid=$value[uid]"><!--{avatar($value[uid],small)}--></a></div>
+				<p<!--{if $ols[$value[uid]]}--> class="online_icon_p" title="在线"<!--{/if}-->><a href="space.php?uid=$value[uid]" title="{$_SN[$value[uid]]}">{$_SN[$value[uid]]}</a></p>
+				<p class="gray"><!--{date('n月j日',$value[dateline],1)}--></p>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{/if}-->
+	
+	<!--{if $visitorlist}-->
+	<div class="sidebox">
+		<h2 class="title">
+			<p class="r_option">
+				<a href="space.php?uid=$space[uid]&do=friend&view=visitor">全部</a>
+			</p>
+			最近来访
+			<!--{if $_SGLOBAL[magic][detector]}-->
+			<span class="gray"><img src="image/magic/detector.small.gif" title="{$_SGLOBAL[magic][detector]}" /><a id="a_magic_detector" href="magic.php?mid=detector" onclick="ajaxmenu(event,this.id,1)">{$_SGLOBAL[magic][detector]}</a></span>
+			<!--{/if}-->
+		</h2>
+		<ul class="avatar_list">
+			<!--{loop $visitorlist $key $value}-->
+			<li>
+				<!--{if $value[vusername] == ''}-->
+				<div class="avatar48"><img src="image/magic/hidden.gif" alt="匿名" /></a></div>
+				<p>匿名</p>
+				<p class="gray"><!--{date('n月j日',$value[dateline],1)}--></p>
+				<!--{else}-->
+				<div class="avatar48"><a href="space.php?uid=$value[vuid]"><!--{avatar($value[vuid],small)}--></a></div>
+				<p<!--{if $ols[$value[vuid]]}--> class="online_icon_p" title="在线"<!--{/if}-->><a href="space.php?uid=$value[vuid]" title="{$_SN[$value[vuid]]}">{$_SN[$value[vuid]]}</a></p>
+				<p class="gray"><!--{date('n月j日',$value[dateline],1)}--></p>
+				<!--{/if}-->
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{/if}-->
+
+	<!--{if $olfriendlist}-->
+	<div class="sidebox">
+		<h2 class="title">
+			<p class="r_option">
+				<a href="space.php?uid=$space[uid]&do=friend">全部</a>
+			</p>
+			我的好友
+			<!--{if $_SGLOBAL[magic][visit]}-->
+			<span class="gray"><img src="image/magic/visit.small.gif" title="{$_SGLOBAL[magic][visit]}" /><a id="a_magic_visit" href="magic.php?mid=visit" onclick="ajaxmenu(event,this.id,1)">{$_SGLOBAL[magic][visit]}</a></span>
+			<!--{/if}-->
+		</h2>
+		<ul class="avatar_list">
+			<!--{loop $olfriendlist $key $value}-->
+			<li>
+				<div class="avatar48"><a href="space.php?uid=$value[uid]"><!--{avatar($value[uid],small)}--></a></div>
+				<p<!--{if $ols[$value[uid]]}--> class="online_icon_p" title="在线"<!--{/if}-->><a href="space.php?uid=$value[uid]" title="{$_SN[$value[uid]]}">{$_SN[$value[uid]]}</a></p>
+				<p class="gray"><!--{if $value[lastactivity]}--><!--{date('H:i',$value[lastactivity],1)}--><!--{else}-->热度($value[num])<!--{/if}--></p>
+			</li>
+			<!--{/loop}-->
+		</ul>
+	</div>
+	<!--{/if}-->
+
+	<!--{if $birthlist}-->
+	<div class="searchfriend">
+		<div class="ye_r_t"><div class="ye_l_t"><div class="ye_r_b"><div class="ye_l_b">
+			<h3>好友生日提醒</h3>
+			<div class="box">
+			<table cellpadding="2" cellspacing="4">
+			<!--{loop $birthlist $key $values}-->
+			<tr>
+				<td align="right" valign="top" style="padding-left:10px;">
+				<!--{if $values[0]['istoday']}-->今天<!--{else}-->{$values[0][birthmonth]}-{$values[0][birthday]}<!--{/if}-->
+				</td>
+				<td style="padding-left:10px;">
+				<ul>
+				<!--{loop $values $value}-->
+				<li><a href="space.php?uid=$value[uid]">{$_SN[$value[uid]]}</a></li>
+				<!--{/loop}-->
+				</ul>
+				</td>
+			</tr>
+			<!--{/loop}-->
+			</table>
+			</div>
+		</div></div></div></div>
+	</div>
+	<!--{/if}-->
+
+	<div class="searchfriend">
+		<div class="ye_r_t"><div class="ye_l_t"><div class="ye_r_b"><div class="ye_l_b">
+			<h3>搜索用户</h3>
+			<form method="get" action="cp.php" style="padding:10px 0 5px 0;">
+				<input name="searchkey" value="" size="20" class="t_input" type="text">
+				<input name="searchsubmit" value="找人" class="submit" type="submit">
+				<input type="hidden" name="searchmode" value="1" />
+				<input type="hidden" name="ac" value="friend" />
+				<input type="hidden" name="op" value="search" />
+			</form>
+			<p>
+				<a href="cp.php?ac=friend&op=search">高级搜索</a><span class="pipe">|</span>
+				<a href="cp.php?ac=friend&op=find">可能认识的人</a><span class="pipe">|</span>
+				<a href="cp.php?ac=invite">邀请好友</a></p>
+		</div></div></div></div>
+	</div>
+
+</div>
+<!--/sidebar-->
+
+<script type="text/javascript">
+
+	var next = $start;
+	function feed_more() {
+		var x = new Ajax('XML', 'ajax_wait');
+		var html = '';
+		next = next + $perpage;
+		x.get('cp.php?ac=feed&op=get&start='+next+'&view=$_GET[view]&appid=$_GET[appid]&icon=$_GET[icon]&filter=$_GET[filter]&day=$_GET[day]', function(s){
+			html = '<h4 class="feedtime">以下是新读取的动态</h4>' + s;
+			$('feed_div').innerHTML += html;
+		});
+	}
+
+	function filter_more(id) {
+		if($('feed_filter_div_'+id).style.display == '') {
+			$('feed_filter_div_'+id).style.display = 'none';
+			$('feed_filter_notice_'+id).style.display = '';
+		} else {
+			$('feed_filter_div_'+id).style.display = '';
+			$('feed_filter_notice_'+id).style.display = 'none';
+		}
+	}
+
+	function close_feedbox() {
+		var x = new Ajax();
+		x.get('cp.php?ac=common&op=closefeedbox', function(s){
+			$('feed_box').style.display = 'none';
+		});
+	}
+	
+	var elems = selector('li[class~=magicthunder]', $('feed_div')); 
+	for(var i=0; i<elems.length; i++){		
+		magicColor(elems[i]); 
+	}
+</script>
+
+<!--{eval my_checkupdate();}-->
+<!--{eval my_showgift();}-->
+<!--{template footer}-->
+<!--{/if}-->
