@@ -83,17 +83,17 @@
 
         
 <!--{loop $goodslist $value}-->
-          <a href="space.php?uid=$value[uid]&do=vip&id=$value[goodsid]"><div class="object mosaic">
+          <a href="space.php?uid=$value[uid]&do=vip&id=$value[goodsid]" target="blank"><div class="object mosaic">
             
             
-              <div class="thumb"><img alt="Prensageographics2" src="http://localhost/upload/home/$value[imageurl]" /></div>
+              <div class="thumb"><img alt="Prensageographics2" src="$value[imageurl]" /></div>
             
             <div class="object_info">
               <p class="bold">$value[subject]<br /></p>上架时间:<!--{date('Y-m-d H:i',$value[dateline],1)}--><br/>
               <span style="color:green;text-decoration: line-through;">原价:$value[oldprice]</span><br/>
                <p class="hel" style="color:red"> <!--{if $value[curprice]}-->会员价:$value[curprice]<!--{/if}-->
 <!--{if $value[power]}--><br/>会员特权:$value[power]<!--{/if}--></p>
-<br/><span style="color:green;float:right">本商品由<{$_SN[$value[uid]]}>发布</span>
+<br/><span style="color:green;float:right">本商品由{$_SN[$value[uid]]}>发布</span>
             </div>
             <div class="div_project"></div>
           </div></a>
